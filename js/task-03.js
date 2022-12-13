@@ -18,5 +18,5 @@ const gallery = document.querySelector("ul.gallery");
 const listCreator = images 
 .map( (el) => <li> <img src="${el.url}" alt="${el.alt}"/> </li>)  
 .join("");
-// gallery.insertAdjacentHTML('afterbegin', imageArr);
+gallery.insertAdjacentHTML('afterbegin', listCreator);
 
