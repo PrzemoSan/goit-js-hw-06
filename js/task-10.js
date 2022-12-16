@@ -1,36 +1,34 @@
-const box = document.getElementById("boxes");
-const input = document.querySelector("input");
-const creation = document.querySelector("[data-create");
-const destruction = document.querySelector("[data-destroy]");
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-};
-let amount = 0;
-input.addEventListener("input", (ev) => {
-  amount = Number(ev.currentTarget.value);
-  console.log("creation", amount);
-});
-// destruction.addEventListener("click", (ev) => {
-//   amount = 0;
-//   input.value = 0;
-//   console.log("destr", amount);
+// const box = document.getElementById("boxes");
+// const input = document.querySelector("input");
+// const creation = document.querySelector("[data-create");
+// const destruction = document.querySelector("[data-destroy]");
+
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// };
+
+// let amount = 0;
+// input.addEventListener("input", (ev) => {
+//   amount = Number(ev.currentTarget.value);
+//   console.log("creation", amount);
 // });
-console.log(creation);
-creation.addEventListener("click", createBoxes);
-function createBoxes() {
-  console.log("input:", input.value);
-  console.log("creating...", typeof amount);
-  for (let i = 1; i <= amount; i++) {
-    console.log("creating..");
-    const newBox = document.createElement("div");
-    box.append(newBox);
-    let sizer = 20 + i * 10;
-    newBox.style.width = `${sizer}px`;
-    newBox.style.height = `${sizer}px`;
-    newBox.style.backgroundColor = getRandomHexColor();
-    console.log(newBox);
-  }
-};;
+
+// console.log(creation);
+// creation.addEventListener("click", createBoxes);
+// function createBoxes() {
+//   console.log("input:", input.value);
+//   console.log("creating...", typeof amount);
+//   for (let i = 1; i <= amount; i++) {
+//     console.log("creating..");
+//     const newBox = document.createElement("div");
+//     box.append(newBox);
+//     let sizer = 20 + i * 10;
+//     newBox.style.width = `${sizer}px`;
+//     newBox.style.height = `${sizer}px`;
+//     newBox.style.backgroundColor = getRandomHexColor();
+//     console.log(newBox);
+//   }
+// };;
 
 
 // const create = document.querySelector(`button[data-create]`);
